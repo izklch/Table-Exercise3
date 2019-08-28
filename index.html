@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title>Exercise 3</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -22,7 +25,7 @@
 <body>
     <div class="container-fluid">
         <div class="row my-5">
-            <div class="col-2 mx-auto">
+            <div class="col-4 col-md-2 mx-auto">
                 <img class="img-fluid" src="https://i.pinimg.com/originals/0c/e8/a5/0ce8a523d88df7415839eb9877cfde47.jpg" alt="Troopers">
             </div>
         </div>
@@ -30,7 +33,7 @@
             <div class="col-md-8 mx-auto">
                 <h4 style="text-align: center">Real-time Planets Filter</h4>
                 <div class="row">
-                    <div class="col">
+                    <div class="col-md-6">
                         <select class="form-control" id="category">
                             <option  value="0">Name</option>
                             <option value="1">Rotation Period</option>
@@ -43,7 +46,7 @@
                             <option value="8">Population</option>
                         </select>
                     </div>
-                    <div class="col">
+                    <div class="col-md-6 mt-3 mt-md-0">
                         <input class="form-control" type="text" id="dev-table-filter" placeholder="Filter Planets By Name" onkeyup="myFilter()" />
                     </div>
                 </div>
@@ -55,50 +58,52 @@
             </div>
         </div>
         <h5 style="text-align: center">Click on column header to sort by category</h5>
-        <table class="table table-bordered text-white" id="dev-table">
-            <thead>
-                <tr class="bg-warning" style="text-align: center">
-                    <th scope="col" class="align-middle" data-index="0">
-                        Name
-                        <i class="fas fa-sort"></i>
-                    </th>
-                    <th scope="col" class="align-middle" data-index="1">
-                        Rotation Period
-                        <i class="fas fa-sort"></i>
-                    </th>
-                    <th scope="col" class="align-middle" data-index="2">
-                        Orbital Period
-                        <i class="fas fa-sort"></i>
-                    </th>
-                    <th scope="col" class="align-middle" data-index="3">
-                        Diameter
-                        <i class="fas fa-sort"></i>
-                    </th>
-                    <th scope="col" class="align-middle" data-index="4">
-                        Climate
-                        <i class="fas fa-sort"></i>
-                    </th>
-                    <th scope="col" class="align-middle" data-index="5">
-                        Gravity
-                        <i class="fas fa-sort"></i>
-                    </th>
-                    <th scope="col" class="align-middle" data-index="6">
-                        Terrain
-                        <i class="fas fa-sort"></i>
-                    </th>
-                    <th scope="col" class="align-middle" data-index="7">
-                        Surface Water
-                        <i class="fas fa-sort"></i>
-                    </th>
-                    <th scope="col" class="align-middle" data-index="8">
-                        Population
-                        <i class="fas fa-sort"></i>
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
+        <div class="table-responsive">
+            <table class="table table-bordered text-white" id="dev-table">
+                <thead>
+                    <tr class="bg-warning" style="text-align: center">
+                        <th scope="col" class="align-middle" data-index="0">
+                            Name
+                            <i class="fas fa-sort"></i>
+                        </th>
+                        <th scope="col" class="align-middle" data-index="1">
+                            Rotation Period
+                            <i class="fas fa-sort"></i>
+                        </th>
+                        <th scope="col" class="align-middle" data-index="2">
+                            Orbital Period
+                            <i class="fas fa-sort"></i>
+                        </th>
+                        <th scope="col" class="align-middle" data-index="3">
+                            Diameter
+                            <i class="fas fa-sort"></i>
+                        </th>
+                        <th scope="col" class="align-middle" data-index="4">
+                            Climate
+                            <i class="fas fa-sort"></i>
+                        </th>
+                        <th scope="col" class="align-middle" data-index="5">
+                            Gravity
+                            <i class="fas fa-sort"></i>
+                        </th>
+                        <th scope="col" class="align-middle" data-index="6">
+                            Terrain
+                            <i class="fas fa-sort"></i>
+                        </th>
+                        <th scope="col" class="align-middle" data-index="7">
+                            Surface Water
+                            <i class="fas fa-sort"></i>
+                        </th>
+                        <th scope="col" class="align-middle" data-index="8">
+                            Population
+                            <i class="fas fa-sort"></i>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
         <div class="my-3" id="loading-indicator" style="text-align: center">
             <div class="spinner-border text-danger" role="status">
                 <span class="sr-only">Loading...</span>
